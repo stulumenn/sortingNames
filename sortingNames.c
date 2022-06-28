@@ -18,14 +18,14 @@ int main(){
 		scanf(" %s", string[i]);
 	}
 
-	for (int i = 1; i < size; i++)
+	for (int i = 0; i < size-1; i++)
     {
-        for (int j = 1; j < size; j++)
+        for (int j = i+1; j < size; j++)
         {
-            if (strcmp(string[j - 1], string[j]) > 0)
+            if (strcmp(string[i], string[j]) > 0)
             {
-                strcpy(t, string[j - 1]);
-                strcpy(string[j - 1], string[j]);
+                strcpy(t, string[i]);
+                strcpy(string[i], string[j]);
                 strcpy(string[j], t);
             }
         }
